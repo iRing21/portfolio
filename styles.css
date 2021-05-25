@@ -5,30 +5,75 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/metamorphous/v13/Wnz8HA03aAXcC39ZEX5y133EOyqs.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Stint Ultra Condensed';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/stintultracondensed/v11/-W_gXIrsVjjeyEnPC45qD2NoFPtBE0xCh2AOrR8P.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
 
-  /* Global */
+/* Global */
 
-  /* Header */
+html {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
 
-  /* Main & Boxes */
+h2 {
+    font-family: 'Metamorphous', sans-serif;
+}
 
-  /* Footer */
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+
+}
+
+p{
+
+}
+
+/* Header & Footer*/
+
+header, footer {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+}
+
+/* Main & Boxes */
+  /* Make columns add up to 30fr, rows up to 25fr? */
+main {
+    margin: 5px 15%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    grid-gap: 1fr;
+    background-color: black;
+}
+
+#bio {
+    grid-column: 1 / 31;
+    grid-row: 1 / 31;
+    background-color: aliceblue; 
+}
+
+/* Footer */
