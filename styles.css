@@ -47,7 +47,7 @@ a {
 }
 
 p{
-
+    font-family: 'Stint Ultra Condensed', sans-serif;
 }
 
 /* Header & Footer*/
@@ -56,24 +56,114 @@ header, footer {
     display: flex;
     width: 100vw;
     height: 10vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.headerFooterInnerBox {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+nav {
+
 }
 
 /* Main & Boxes */
   /* Make columns add up to 30fr, rows up to 25fr? */
 main {
-    margin: 5px 15%;
+    margin: 5px 10%;
     height: 80vh;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
-    grid-template-rows: repeat(30, 1fr);
-    grid-gap: 1fr;
+    grid-template-rows: repeat(40, 1fr);
+    gap: 0px;
     background-color: black;
 }
 
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.innerBox {
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    align-content: center;
+}
+
 #bio {
-    grid-column: 1 / 31;
-    grid-row: 1 / 31;
+    grid-column: 1 / 15;
+    grid-row: 1 / 15;
     background-color: aliceblue; 
 }
+
+#topEmpty {
+    grid-column: 16 / 22;
+    grid-row: 1 / 15;
+    background-color: red;
+}
+
+#skills {
+    grid-column: 23 / 31;
+    grid-row: 1 / 14;
+    background-color: aliceblue;
+}
+
+#leftEmpty {
+    grid-column: 1 / 5;
+    grid-row: 16 / 34;
+    background-color: blue;
+} 
+
+#pic {
+    grid-column: 6 / 17;
+    grid-row: 16 / 33;
+    background-color: pink;
+} 
+
+#picRightEmpty {
+    grid-column: 18 / 22;
+    grid-row: 16 / 33;
+    background-color: aliceblue;
+} 
+
+#rightEmpty {
+    grid-column: 23 / 31;
+    grid-row: 15 / 27;
+    background-color: yellow;
+}
+
+#contact {
+    grid-column: 23 / 31;
+    grid-row:  28 / 33;
+    background-color: aliceblue;
+} 
+
+#bottomLeftEmpty {
+    grid-column: 1 / 5;
+    grid-row: 35 / 41;
+    background-color: red;
+} 
+
+#projects {
+    grid-column: 6 / 17;
+    grid-row: 34 / 41;
+    background-color: aliceblue;
+}
+
+#interests {
+    color: aliceblue;
+    grid-column: 18 / 30;
+    grid-row: 34 / 41;
+    background-color: blue;
+} 
 
 /* Footer */
