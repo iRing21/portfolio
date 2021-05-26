@@ -29,8 +29,10 @@
 
 html {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     box-sizing: border-box;
+    justify-content: center;
+    align-self: center;
     background-color: aliceblue;
 }
 
@@ -43,7 +45,7 @@ h3 {
 }
 
 a {
-
+    text-decoration: underline;
 }
 
 p{
@@ -55,27 +57,65 @@ p{
 header, footer {
     display: flex;
     width: 100vw;
-    height: 10vh;
+    height: 8vh;
     justify-content: center;
     align-content: center;
 }
 
 .headerFooterInnerBox {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-self: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20%;
+    margin-right: 10%;
+    margin-left: 10%; 
+}
+
+nav {
+    display: flex;
+    max-width: 33%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+nav li {
+    display: inline;
+
+}
+
+
+/* Main & Boxes */
+  /* Make columns add up to 30fr, rows up to 25fr? */
+
+main {
+    /*background-image: url(./media/temeraire.png);
+    background-size: cover; */
+    background-color: lightblue;
+    margin: 0;
+    width: 100%;
+    height: 84vh;
+    display: flex;
     justify-content: center;
     align-content: center;
 }
 
-nav {
-
-}
-
-/* Main & Boxes */
-  /* Make columns add up to 30fr, rows up to 25fr? */
-main {
-    margin: 5px 10%;
-    height: 80vh;
+article {
+    align-self: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 90%;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(40, 1fr);
@@ -89,6 +129,10 @@ main {
     justify-content: center;
     align-content: center;
     text-align: center;
+}
+
+.whiteBox {
+    background-color: white !important; 
 }
 
 .innerBox {
