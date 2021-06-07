@@ -60,12 +60,14 @@ header, footer {
     display: flex;
     width: 100vw;
     height: 5vh;
+    min-height: 32px;
     justify-content: center;
     align-content: center;
 }
 
 .headerFooterInnerBox {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
     align-self: center;
@@ -82,17 +84,15 @@ header, footer {
     flex-wrap: nowrap;
 }
 
-.navAndSoundcloud {
-    display: flex;
-    width: 20%;
-                /* for mid size, need to set differently for smaller */
-                /* look for gitHub embed */
-    justify-content: space-evenly;
-    align-content: center;
-    align-self: center;
+#altContact {
+    display: none;
 }
 
-.peepMySoundcloud {
+.navAndSoundcloud {
+    display: flex;
+    width: 125px;
+    justify-content: end;
+    align-content: center;
     align-self: center;
 }
 
@@ -104,7 +104,7 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
     align-self: center;
     width: 100%;
@@ -115,21 +115,12 @@ nav li {
 
 }
 
-img {
-    max-height: 75%;
-    max-width: 75%;
-    border-radius: 50%;
-    border: solid white 2px;
-    box-shadow: 0px 0px 60px 10px goldenrod;
-}
 
 
 /* Main & Boxes */
   /* columns add up to 30fr, rows up to 25fr */
 
 main {
-    /*background-image: url(./media/temeraire.png);
-    background-size: cover; */
     background-color: lightblue;
     margin: 0;
     width: 100%;
@@ -139,7 +130,11 @@ main {
     align-content: center;
 }
 
-article {
+#error {
+    display: none; /* for when screen size is too small to display anything useful */
+}
+
+article { /* went for grid template in the spirit of Der Stijl */
     align-self: center;
     margin-left: 10%;
     margin-right: 10%;
@@ -177,6 +172,10 @@ article {
     background-color: aliceblue; 
 }
 
+#altBio {
+    display: none;
+}
+
 #topEmpty {
     grid-column: 16 / 22;
     grid-row: 1 / 15;
@@ -187,6 +186,10 @@ article {
     grid-column: 23 / 31;
     grid-row: 1 / 14;
     background-color: aliceblue;
+}
+
+#altSkills {
+    display: none;
 }
 
 #leftEmpty {
@@ -203,6 +206,14 @@ article {
     background-position: center;
 } 
 
+#pic img {
+    max-height: 75%;
+    max-width: 75%;
+    border-radius: 50%;
+    border: solid white 2px;
+    box-shadow: 0px 0px 60px 10px goldenrod;
+}
+
 #picRightEmpty {
     grid-column: 18 / 22;
     grid-row: 16 / 33;
@@ -215,7 +226,7 @@ article {
     background-color: yellow;
 }
 
-#contact {
+#formallyContact {
     grid-column: 23 / 31;
     grid-row:  28 / 33;
     background-color: aliceblue;
@@ -240,48 +251,154 @@ article {
     background-color: blue;
 } 
 
-/* Footer */
+/* Media queries */
+    /* width modifications */
 
-#lastUpdated {
+@media only screen 
+    and (max-width: 245px){
+        
+        footer, article {
+            display: none;
+        }
+
+        #name {
+            display: none;
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        #error {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
+
+    }
+
+@media only screen
+    and (max-width: 430px){
+
+    #skillsPar {
+        display: none;
+    }
+
+    #altSkills {
+        display: inline;
+    }
+
+
+    h2 {
+        display: none;
+    }
+
+    #projects .innerBox {
+        display: none;
+    }
 
 }
 
-/* Phones */
+@media only screen
+    and (max-width: 650px){
     
-    /* Portrait */
-    @media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) { 
+    .headerFooterInnerBox{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    article {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #altBio {
+        display: inline;
+    }
+
+    #bioPar {
+        display: none;
+    }
+
 
 }
 
-    /* Landscape */
-    @media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) { 
+@media only screen
+    and (max-width: 800px){
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 13px;
+    }
 
 }
 
+    /*height modifications */
 
-/* Tablet */
-    /* Portrait */
-    @media only screen 
-and (min-device-width: 1024px) 
-and (max-device-width: 1024px) 
-and (orientation: portrait) 
-and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen 
+    and (max-height: 100px){
+        footer, article {
+            display: none;
+        }
 
-}
+        main {
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
 
-    /* Landscape */
-    @media only screen 
-and (min-device-width: 1366px) 
-and (max-device-width: 1366px) 
-and (orientation: landscape) 
-and (-webkit-min-device-pixel-ratio: 2) {
+        #error {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
 
-}
+    }
+
+@media only screen 
+    and (max-height: 450px){
+        
+        h2{ 
+            display: none;
+        }
+
+    }
+
+@media only screen
+    and (max-height: 750px){
+
+        h2 {
+            font-size: 16px;
+        }
+    
+        p{
+            font-size: 13px;
+        }
+
+        #skillsPar {
+            display: none;
+        }
+
+        #altSkills {
+            display: inline;
+        }
+
+        #altBio {
+            display: inline;
+        }
+    
+        #bioPar {
+            display: none;
+        }
+    
+    
+    }
+
