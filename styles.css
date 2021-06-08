@@ -198,7 +198,7 @@ article { /* went for grid template in the spirit of Der Stijl */
     background-color: blue;
 } 
 
-#pic {
+#picBox {
     grid-column: 6 / 17;
     grid-row: 16 / 33;
     background-image: url(./media/JMW.jpg);
@@ -206,7 +206,7 @@ article { /* went for grid template in the spirit of Der Stijl */
     background-position: center;
 } 
 
-#pic img {
+#picBox img {
     max-height: 75%;
     max-width: 75%;
     border-radius: 50%;
