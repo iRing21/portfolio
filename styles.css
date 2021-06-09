@@ -152,6 +152,11 @@ article { /* went for grid template in the spirit of Der Stijl */
     justify-content: center;
     align-content: center;
     text-align: center;
+    z-index: 0;
+}
+
+.box:hover {
+    opacity: .85;
 }
 
 .whiteBox {
