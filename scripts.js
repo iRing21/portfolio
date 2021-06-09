@@ -1,23 +1,21 @@
-
 // Beneath is for changing profile pic
 
-function randomNum() {
-    return Math.floor(Math.random() * 3); // # of photos +1
-}
+const picSelectorInput = Math.floor(Math.random() * 3);
 
-let picSelectorInput = randomNum();
-
-const pic = Document.getElementById('pic');
+const pic = document.getElementById("pic");
 
 function picSelector() {
     switch (picSelectorInput) {
         case 0:
-            pic.setAttribute('src', 'media/lilycropped.png');  // Lily cropped pic
+            pic.src = "media/lilycropped.png";
+            break;  // Lily cropped pic
         case 1:
-            pic.setAttribute('src', 'media/coatcropped.png'); // coat cropped pic
+            pic.src = "media/coatcropped.png";
+            break; // coat cropped pic
         case 2: 
-            pic.setAttribute('src', 'media/mecropped.png'); // me cropped pic
+            pic.src = "media/mecropped.png";
+            break; // me cropped pic
     }
 }
 
-pic.onclick = picSelector();
+pic.onload = picSelector();
